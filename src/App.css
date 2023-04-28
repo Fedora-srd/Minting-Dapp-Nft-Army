@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Kreon:wght@300;400;500;600;700&family=Roboto:wght@100&family=Tilt+Neon&display=swap');
+
+*{
+  font-family: "Kreon", sans-serif;
+  box-sizing: border-box;
+  overflow-y: auto;
+
+
+
+
+  
+}
+.App {
+  text-align: center;
+  color: black;
+  overflow: auto;
+
+
+}
+
+
+
+
+.overlay{
+  opacity: 0.85 ;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  position: fixed;
+}
+
+body{
+  background-image: url("https://media.giphy.com/media/IbekjrW43xz0XNtpe0/giphy.gif");
+  z-index: -1;
+  position: absolute;
+  background-size: 100%;
+  background-position-x: center;
+  top:0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-attachment: scroll;
+  background-repeat: no-repeat;
+
+}
+
+.RightSide{
+  overflow: hidden;
+  position:inherit;
+  display: block;
+
+}
+
+.rightBox{
+  overflow: hidden;
+
+
+}
+
+.rightImg{
+  overflow: hidden;
+  width: 60px;
+
+}
+
+.tbn{
+  font-size: 20px;
+  font-weight: bold;
+  border: 1.5px solid black;
+  background-color: brown;
+  border-radius: 10px;
+  box-shadow: 5px 5px black;
+  cursor: pointer;
+}
+.tbn:hover{
+  
+  box-shadow: 4px 4px black;
+}
+
+.tbn:active{
+  box-shadow: none;
+}
+
+.connected{
+  color:#b80000;
+  font-weight: bolder;
+}
+
+.MintContainer{
+  position: relative;
+  display:block;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.input-a{
+  
+  width: 50px;
+  text-align:end;
+  padding: 5px;
+  margin: 10px;
+  border-radius: 10px;
+  border: 1px solid black;
+  font-family:"inherit";
+
+}
+
+.btn-a{
+  background-color: brown;
+  border-radius: 5px;
+  width: 30px;
+  height: 30px;
+  border: 1px solid black;
+  cursor: pointer;
+
+
+}
+
+.btn-mint{
+  position: relative;
+  font-size: larger;
+  font-weight: bolder;
+  padding: 10px;
+  margin-top: 5px;
+  border-radius: 20px;
+  background: linear-gradient(to top right, #290101 0%, #500404 50%, #b92626);
+  cursor: pointer;
+  transition: .2s;
+}
+
+.btn-mint:hover{
+padding: 12px; 
+background: linear-gradient(to top right, #010229 0%, #040f50 50%, #26b9ad);
+
+
+}
+
+
