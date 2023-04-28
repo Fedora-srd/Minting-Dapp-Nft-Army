@@ -1,4 +1,4 @@
-CI CONCENTRIAMO SULLA PARTE DI SOLIDITY E ETHER.JS
+Ci concentiamo sulla parte Solidity, Hard-Hat, Infura
 
 1) installiamo react con npx create-react-app xxx
 
@@ -139,57 +139,6 @@ Ora vai su etherscan e dovresti vedere il contratto e poterlo leggere e write.
 
 Ora andiamo su vscode e creiamo un file “esempio.json” andiamo nella cartella artifacts e poi nella cartella contracts ed entriamo nel file Progetto.json e copiamo tutto quello che c'è dentro e lo copiamo in un nuovo file all'interno di src, sempre un file Esempio.json.
 
-
-
-
-
-ORA COSTRUIAMO LA DAPP.
-
-APP
-import { useState } from 'react';
-import './App.css';
-import MainMint from "./MainMint.js";
-import NavBar from "./NavBar.js";
-
-function App() {
-const[accounts, setAccounts] = useState([]);
-
-    return (
-        <div className='overlay' >
-            <div className="App">
-                <NavBar accounts = {accounts} setAccounts={setAccounts}/>
-                <MainMint accounts = {accounts} setAccounts={setAccounts}/>
-            </div>
-            <div className='background-a' ></div>
-            
-        </div>
-    );
-}
-
-export default App;
-
-
-
-
-
-NAVBAR.
-
-Nella navbar passiamo l'hook  creato nell'app principale e creiamo una funzione che si connetta a metamask e permetta all'account di loggare.
-
-Creiamo una variabile per verificare che un account sia connesso:
-
-
-Const NavBar = ({ accounts, setAccounts}) => {
-const isConnected = Boolean(accounts[0]);}
-
-Creiamo una funzione per collegarci a metamask dell'utente e connettersi
-async function connectAccount(){
-if (window.ethereum) { 
-const accounts = await window.ethereum.request({method: “eth_requestAccounts”,});setAccounts(accounts);}}
-
-ora diciamo che se l'account è connesso allora mostriamo un messaggio altrimenti ci sarà un bottone per connettersi:
-
-{isConnected ? ( <p> Connected</p>) : ( <button onClick={connectAccount}>Connect</button>)}
 
 
 
